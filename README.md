@@ -1,3 +1,18 @@
+# Contentful Section Labels
+
+![Screengrab](screengrab.png)
+
+The purpose of this app is to provide customizable section dividers between each section of an entry in Contentful.
+
+### How to use:
+
+1. Add a single, short text field in the "Content Model" tab
+2. In the dialog box, put a name in the "Name" field. For best results, the names of sections should be the same (eg., "Section"). Just make the "Field ID" unique. The "Field ID" will not show in the front end.
+3. Click "Create and configure" button
+4. Click on the "Default value" section
+5. Type in your section divider text in this field
+6. In the "Appearance" menu item, select the "Section divider" app.
+
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
 ## Available Scripts
@@ -28,11 +43,11 @@ Read [here](https://www.contentful.com/developers/docs/extensibility/app-framewo
 
 #### `npm run upload-ci`
 
-Similar to `npm run upload` it will upload your app to contentful and activate it. The only difference is   
+Similar to `npm run upload` it will upload your app to contentful and activate it. The only difference is
 that with this command all required arguments are read from the environment variables, for example when you add
 the upload command to your CI pipeline.
 
-For this command to work, the following environment variables must be set: 
+For this command to work, the following environment variables must be set:
 
 - `CONTENTFUL_ORG_ID` - The ID of your organization
 - `CONTENTFUL_APP_DEF_ID` - The ID of the app to which to add the bundle
@@ -52,9 +67,8 @@ passed into each location. This can be used to interact with Contentful's
 management API. For example
 
 ```js
-  // Use the client
-  cma.locale.getMany({}).then((locales) => console.log(locales))
-
+// Use the client
+cma.locale.getMany({}).then((locales) => console.log(locales));
 ```
 
 Visit the [`contentful-management` documentation](https://www.contentful.com/developers/docs/extensibility/app-framework/sdk/#using-the-contentful-management-library)
